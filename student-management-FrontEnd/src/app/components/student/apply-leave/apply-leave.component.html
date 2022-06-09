@@ -1,0 +1,45 @@
+<div class="leave_apply">
+    <form [formGroup]='leaveForm' method="post" class="form" (ngSubmit)="leaveApply()">
+      <h2>Apply Leave</h2>
+      <div class="name date">
+          <label for="reason">Enter Reason</label><br>
+          <input type="text" id="reason" formControlName="reason" name='reason' placeholder="Enter Name" required>
+      </div>
+      <div class="date">
+          <label for="start_date">From</label><br>
+          <input type="date" name="start_date" formControlName="start_date" placeholder="From Date" required>
+      </div>
+      <div class="date">
+          <label for="mobile">To</label><br>
+          <input type="date" name="end_date" formControlName="end_date" placeholder="To Date" required>
+      </div>
+      <div class="button">
+          <button type="submit">Apply</button>
+      </div>
+  </form>
+  </div>
+
+  <div class="leaves_list">
+    <table class="leaves-table">
+      <tr>
+        <th>S.NO:</th>
+        <th>Candidate ID</th>
+        <th>Reason</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Status</th>
+      </tr>
+
+        <tr *ngFor="let row of data; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{row.candidate_id}}</td>
+          <td>{{row.leave_reason|slice:0:21}}</td>
+          <td>{{row.leave_start_date}}</td>
+          <td>{{row.leave_end_date}}</td>
+          <td class="{{row.status}}">{{row.status}}</td>
+        </tr>
+
+
+
+    </table>
+  </div>

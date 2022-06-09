@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{% static 'logo/mrcet.png' %}">
+    {% block title %}
+    {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/home/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home/footer.css' %}">
+    {% block styling %}
+
+    {% endblock styling %}
+</head>
+<body>
+    {% include "home/navigation.html" %}
+    {% block content %}
+
+    {% endblock content %}
+    <footer class="footer">
+        <div class="foot">
+            <div class="rows contacts">
+                <h3>Conatct Us</h3>
+                <ul>
+                    <li><i class="far fa-envelope"></i>  mrcet@mail.com</li>
+                    <li><i class="fas fa-phone-volume"></i>  8374-00-0000</li>
+                </ul>
+            </div>
+            <div class="rows address">
+                <h3>How To Find US</h3>
+                <ul>
+                    <p>Maisammaguda, Dhulapally,</p>
+                    <p>Kompally, Medchal,</p>
+                    <p>Hyderabad - 500100</p>
+                </ul>
+            </div>
+            <div class="rows college">
+                <h3>College</h3>
+                <ul>
+                    <li><a href="#">About US</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li> <a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy">
+            <p>© 2021 MRCET. All rights reserved. Privacy Policy</p>
+        </div>
+    </footer>
+</body>
+</html>

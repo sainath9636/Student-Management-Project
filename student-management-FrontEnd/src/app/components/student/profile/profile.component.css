@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Pushster&display=swap');
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px 35px;
+    margin: 20px 0;
+}
+.image{
+    width: 300px;
+    background: #fff;
+    height: 350px;
+    padding: 20px;
+}
+.image .pic{
+    width: 100%;
+    height: 320px;
+    margin-bottom: 15px;
+}
+.image .pic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.image h2.name{
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(17, 151, 133);
+    padding: 5px 0;
+    border-radius: 15px;
+}
+.personal_details{
+    background: #fff;
+    margin: 0 20px;
+    width: 600px;
+    max-width: 800px;
+    padding: 40px;
+}
+.personal_details h1{
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgb(240, 53, 53);
+    padding: 10px 0;
+    border-radius: 15px;
+    color: #fff;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+}
+.details span{
+    padding: 10px 5px;
+    margin: 10px 0;
+    border: 1px solid #000;
+}

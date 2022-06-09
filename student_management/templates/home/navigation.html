@@ -1,0 +1,30 @@
+
+<header class="header">
+    <div class="container-head">
+        <div class="row">
+            <div class="logo">
+                <a href="{% url 'home' %}">MR<span>CET</span></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li {% if request.session.is_active == 'home' %} class="active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
+                    <li {% if request.session.is_active == 'ac' %} class="active" {% endif %}><a href="{% url 'academics' %}">Academics</a></li>
+                    <li {% if request.session.is_active == 'dept' %} class="active" {% endif %}><a href="{% url 'departments' %}">Departments</a></li>
+                    <li {% if request.session.is_active == 'faci' %} class="active" {% endif %}><a href="{% url 'facilities' %}">Facilities</a></li>
+                    <li {% if request.session.is_active == 'about' %} class="active" {% endif %}><a href="{% url 'about_us' %}">About Us</a></li>
+                </ul>
+            </nav>
+            {% if request.session.name %}
+            <div class="dropdown">
+                <button class="dropbtn"><li class="profile"><img src="{{request.session.url}}" alt=""></li></button>
+                <div class="dropdown-content">
+                  <a href="{% url 'student_home' %}">Dashboard</a>
+                  <a href="{% url 'logout' %}">LogOut</a>
+                </div>
+              </div>
+            {% else %}
+                <li class="nav"><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </div>
+    </div>
+</header>

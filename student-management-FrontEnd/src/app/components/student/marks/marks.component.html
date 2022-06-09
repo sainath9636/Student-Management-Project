@@ -1,0 +1,29 @@
+<div class="semister">
+    <form  method="post" [formGroup]="marksForm" (ngSubmit)="getMarks(marksForm.value.sem)">
+        <div class="semisters" id="semisters">
+            <label for="semisters">Select the Semister:</label>
+            <select name="semisters" id="semisters" required formControlName='sem'>
+                <option *ngFor="let sem of sem_list" value="sem">{{sem}}</option>
+
+              </select>
+        </div>
+        <input type="submit">
+    </form>
+</div>
+<div class="performance">
+    <h1>Semister {{ sem}} overall performance</h1>
+    <div class="graphs">
+        <div class="graph1">
+            <canvas id="sem"></canvas>
+        </div>
+        <div class="graph2">
+            <canvas id='mid1'></canvas>
+        </div>
+        <div class="graph3">
+            <canvas id="mid2"></canvas>
+        </div>
+        <div class="graph4">
+            <canvas id="slip"></canvas>
+        </div>
+    </div>
+</div>

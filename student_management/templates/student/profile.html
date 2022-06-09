@@ -1,0 +1,29 @@
+{% extends "student/dashboard.html" %}
+{% load static %}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'css/student/profile.css' %}">
+{% endblock link %}
+{% block content %}
+    <div class="profile">
+        <div class="image">
+            <div class="pic">
+                <img src="{{request.session.url}}" alt="">
+            </div>
+            <h2 class="name">{{request.session.name}}</h2>
+        </div>
+        <div class="personal_details">
+            <h1>Personal Details</h1>
+            <div class="details">
+                <span>Name   : {{user.student_name}}</span>
+                <span>ID     :  {{user.student_id}}</span>
+                <span>Gender :  {{user.gender}}</span>
+                <span>Dept   :    {{user.department}}</span>
+                <span>Mbl No :    {{user.phone_number}}</span>
+                <span>Email  :    {{user.student_email}}</span>
+                <span>Parent Name: {{user.parent_name}}</span>
+                <span>Parent Contact: {{user.parent_mobile_number}}</span>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}

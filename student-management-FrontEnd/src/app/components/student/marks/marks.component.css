@@ -1,0 +1,43 @@
+.semister{
+    margin: 10px 0;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.semister form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+select{
+    outline: none;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+.performance{
+    background-color: #fff;
+    margin: 30px 20px;
+    padding: 20px;
+}
+.performance h1{
+    text-align: center;
+    color: rgb(65, 63, 63);
+    margin-bottom: 25px;
+}
+.performance .graphs{
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.graph1, .graph2, .graph3, .graph4{
+    width: 80%;
+    margin-bottom: 20px;
+}
+canvas{
+    width: 100%;
+}

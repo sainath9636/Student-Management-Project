@@ -1,0 +1,20 @@
+<div class="login">
+    <h1>Login</h1>
+    <form method="post" [formGroup]='loginForm' (ngSubmit)="login()">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Enter Email</span>
+                <input type="email" placeholder="Enter Email" id="email" name="email" required formControlName="email">
+                <p *ngIf="emailId && emailId.touched && emailId.invalid" class="error">Email Should Not Be Blank</p>
+            </div>
+            <div class="input-box">
+                <span class="details">Enter Password</span>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required formControlName="password">
+                <p *ngIf="passWord && passWord.touched && passWord.invalid" class="error">Password Should Not Be Blank</p>
+            </div>
+            <div class="button">
+                <button type="submit" value="submit" name="submit">Submit</button>
+                <p *ngIf="userError" class="error">Please Enter Correct Credentials</p>
+            </div>
+        </div>
+    </form>

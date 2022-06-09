@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar_title" routerLink="/staff/staff_profile">
+                <img src="http://127.0.0.1:8000{{url}}" alt="">
+                <h1>{{name}}</h1>
+            </div>
+            <div class="sidebar_menu">
+                <div routerLinkActive="active" class="sidebar_link" routerLink="/staff" [routerLinkActiveOptions]="{exact:true}">
+                    <fa-icon [icon]="['fas','home']"></fa-icon>
+                    <a >Dashboard</a>
+                </div>
+                <div routerLinkActive='active'  routerLink="/staff/staff_profile" class="sidebar_link">
+                    <fa-icon [icon]="['fas','user-circle']"></fa-icon>
+                    <a>Profile</a>
+                </div>
+                <div routerLinkActive='active' class="sidebar_link" routerLink="/staff/student_details">
+                    <fa-icon [icon]="['fas','file']"></fa-icon>
+                    <a >Student Details</a>
+                </div>
+                <div routerLinkActive='active' class="sidebar_link" routerLink="/staff/staff_leaves">
+                    <fa-icon [icon]="['fas','file']"></fa-icon>
+                    <a >Leaves</a>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal">
+            <header>
+                <nav>
+                    <li class="branch">Mechanical <span>Engineering</span></li>
+                    <ul>
+                        <li><a routerLink="">Home</a></li>
+                        <li (click)="logout()"><a class="btn"><fa-icon [icon]="['fas','sign-out-alt']"></fa-icon> Log out</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="content-block">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

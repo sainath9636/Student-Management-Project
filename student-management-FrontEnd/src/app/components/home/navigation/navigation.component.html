@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="container-head">
+        <div class="row">
+            <div class="logo">
+                <a routerLink="">MR<span>CET</span></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a routerLinkActive="active" routerLink="" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+                    <li><a routerLinkActive="active" routerLink="/academics">Academics</a></li>
+                    <li><a routerLinkActive="active" routerLink="/departments">Departments</a></li>
+                    <li><a routerLinkActive="active" routerLink="/facilities">Facilities</a></li>
+                    <li><a routerLinkActive="active" routerLink="/about_us">About Us</a></li>
+                </ul>
+            </nav>
+             <div class="dropdown" *ngIf="isLogged">
+                <button class="dropbtn"><li class="profile"><img src="http://127.0.0.1:8000{{url}}" alt=""></li></button>
+                <div class="dropdown-content" >
+                    <a routerLinkActive="active" (click)="dashboard()">Dashboard</a>
+                    <a (click)="logout()">LogOut</a>
+                </div>
+             </div>
+               <li class="nav login" *ngIf="!isLogged"><a routerLinkActive="active" routerLink="/login">Login</a></li>
+        </div>
+    </div>
+</header>

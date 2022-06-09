@@ -1,0 +1,82 @@
+.intro{
+    margin: 15px 30px;
+    background: #ffffff;
+    color: rgb(51, 49, 49);
+    padding: 15px 20px;
+}
+.intro span{
+    font-weight: bold;
+    color: rgb(209, 7, 7);
+}
+
+/* -----------------------------Card Design----------------------------------------------------------*/
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.cards .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    width: 250px;
+    height: 150px;
+    margin: 10px 15px;
+    padding-right: 10px;
+}
+.cards .card fa-icon{
+    font-size: 1.8rem;
+    background-color: rgb(218, 120, 29);
+    border-radius: 50%;
+    color: #ffffff;
+    padding: 15px;
+    margin: 0 10px;
+}
+.cards .card .inside{
+    text-align: center;
+    color: #4e4f50;
+}
+.inside span{
+    font-weight: 500;
+    font-size: 0.9rem;
+    word-wrap: normal;
+}
+.card.passed fa-icon{
+    background: #24d641;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card.due i{
+    background-color: rgb(252, 37, 22);
+}
+.card.semister fav-icon{
+    background-color: rgb(6, 168, 197);
+}
+
+
+
+/*----------------------Chart Design---------------------------------------------------*/
+.chart{
+    margin: 20px 40px;
+    background: #ffffff;
+    padding: 20px 35px;
+}
+.chart .chart-title{
+    text-align: center;
+    color: rgb(105, 103, 103);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+.chart .graph{
+    width: 80%;
+    height: 80%;
+    border: 1px solid #000;
+}
+.graph #mychart{
+    height: 90%;
+    width: 90%;
+}

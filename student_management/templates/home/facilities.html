@@ -1,0 +1,72 @@
+{% extends "home/base.html" %}
+{% block title %}
+  <title>Facilities</title>
+{% endblock title %}
+{% load static %}
+{% block styling %}
+<link rel="stylesheet" href="{% static 'css/home/facilities.css' %}">
+{% endblock styling %}
+{% block content %}
+<h1 class="faci">Our College Facilities</h1>
+    <div class="facility-container">
+        <div class="facilities">
+            <div class="library">
+                <h2 class="title">Library Facility</h2>
+                <div class="management">
+                    <div class="image">
+                        <img src="https://images.unsplash.com/photo-1600431521340-491eca880813?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
+                    </div>
+                    <p class="description">Information is an essential input to national development.
+                        The modern library has great responsibility in harnessing and utilization of information.
+                        The library and information centers strive for high quality of library services which emphasis the actual delivery of information
+                        rather than actual delivery of documents for meeting their generic as well as specific needs of the users.
+                        the library occupies a prominent position and it is an important and integral part of the teaching programme.
+                        It is not merely a depository of books, but an active workshop instrument in the production of or original thinking.
+                        The aim of college education and college libraries in inter-related.</p>
+                </div>
+
+            </div>
+            <div class="gym">
+                <h2 class="title">Gym Facility</h2>
+                <div class="management">
+                    <div class="image">
+                        <img src="https://images.unsplash.com/photo-1623874514711-0f321325f318?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGd5bSUyMGZhY2lsaXR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <p class="description">Here we provide fee gym facility for the students to imrpove there fitness.Having a workplace fitness center offers great convenience. Our students can commit to a healthy lifestyle as they won’t have to spend time traveling to a gym in a different location. </p>
+                </div>
+
+            </div>
+            <div class="sports">
+                <h2 class="title">Sports Facility</h2>
+                <div class="images">
+                    <div class="img"><img src="https://images.unsplash.com/photo-1581390561753-e6d41f31b10a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZSUyMHNwb3J0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt=""></div>
+                    <div class="img"><img src="https://images.unsplash.com/photo-1461897104016-0b3b00cc81ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHNwb3J0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt=""></div>
+                    <div class="img"><img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=449&q=80" alt=""></div>
+                    <div class="img"><img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3JpY2tldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="registration">
+
+            <form action="" method="post" class="form">
+                <h2>Get Admissions</h2>
+                <div class="name data">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" placeholder="Enter Name">
+                </div>
+                <div class="email data">
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" placeholder="Enter Email">
+                </div>
+                <div class="mobile data">
+                    <label for="mobile">Mobile No</label><br>
+                    <input type="text" id="mobile" placeholder="Enter Mobile">
+                </div>
+                <div class="button">
+                    <button type="submit">Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "student/dashboard.html" %}
+{% load static %}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'css/student/student_leaderboard.css' %}">
+{% endblock link %}
+{% block content %}
+<div class="board">
+    <h1 class="title">Students Leaderboard</h1>
+    <table id="leaderboard">
+        <tr>
+          <th>S.NO:</th>
+          <th>Student Id</th>
+          <th>Student Name</th>
+          <th>Overall CGPA</th>
+        </tr>
+
+        {% for row in data %}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{row.student_id}}</td>
+          <td>{{row.student_id__student_name}}</td>
+          <td>{{row.sem_marks|floatformat:1}}</td>
+        </tr>
+
+        {% endfor %}
+        
+    </table>
+</div>
+{% endblock content %}

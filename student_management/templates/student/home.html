@@ -1,0 +1,82 @@
+{% extends "student/dashboard.html" %}
+{% load static %}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'css/student/home.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+{% endblock link %}
+{% block content %}
+<div class="intro">
+    <h1>Welcome to Dashboard</h1>
+    <p>Hello <span>{{request.session.name}}</span>, welcome to your Dashboard</p>
+</div>
+<div class="cards">
+  <div class="card cgpa">
+    <i class="fa-solid fa-user-graduate"></i>
+    <div class="inside">
+      <h2>{{cgpa}}</h2>
+      <span>CGPA</span>
+    </div>
+  </div>
+  <div class="card passed">
+    <i class="fa-solid fa-thumbs-up"></i>
+    <div class="inside">
+      <h2>{{passed}}</h2>
+      <span>Total Subjects Passed</span>
+    </div>
+  </div>
+  <div class="card due">
+    <i class="fas fa-thumbs-down"></i>
+    <div class="inside">
+      <h2>{{failed}}</h2>
+      <span>Due Subjects</span>
+    </div>
+  </div>
+  <div class="card semister">
+    <i class="fa fa-calendar"></i>
+    <div class="inside">
+      <h2>{{semisters}}/8</h2>
+      <span>Semister</span>
+    </div>
+  </div>
+</div>
+<div class="chart">
+  <h1 class="chart-title">Overall Semisters Subject wise Performance</h1>
+  <div class="graph">
+    <canvas id="mychart"></canvas>
+  </div>
+</div>
+<script>
+  var lab = ['sliptest','mid1', 'mid2', 'sem']
+  var data = {{overall|safe}}
+  window.onload = function(){
+    var ctx = document.getElementById('mychart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels:lab,
+          datasets: [{
+              label: 'Overall Semisters Performance in %',
+              data: data,
+              backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)',
+              "#6970d5",
+              ],
+              barThickness:80
+          }]
+      },
+      options: {
+        maintainAspectRatio:false,
+        responsiveness:true,
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+  }
+
+</script>
+{% endblock content %}

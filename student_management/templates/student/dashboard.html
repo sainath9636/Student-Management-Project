@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/student/dashboard.css' %}">
+    <title>Student Dashboard</title>
+    {% block link %}
+
+    {% endblock link %}
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar_title">
+                <img src="{{request.session.url}}" alt="">
+                <h1>{{request.session.name}}</h1>
+            </div>
+            <div class="sidebar_menu">
+                <div {% if is_active == "home" %}class="sidebar_link active"{% endif %}class="sidebar_link">
+                    <i class="fa fa-home"></i>
+                    <a href="{% url 'student_home' %}">Dashboard</a>
+                </div>
+                <div {% if is_active == 'profile' %} class="sidebar_link active" {% endif %}class="sidebar_link">
+                    <i class="far fa-user-circle"></i>
+                    <a href="{% url 'student_profile' %}">Profile</a>
+                </div>
+                <div {% if is_active == 'marks' %}class="sidebar_link active"{% endif %}class="sidebar_link">
+                    <i class="fas fa-file-alt"></i>
+                    <a href="{% url 'student_mark' %}">Marks</a>
+                </div>
+                <div {% if is_active == 'board' %}class="sidebar_link active"{% endif %}class="sidebar_link">
+                    <i class="far fa-newspaper"></i>
+                    <a href="{% url 'student_leaderboard' %}">Leaderboard</a>
+                </div>
+                <div {% if is_active == 'faculty' %}class="sidebar_link active"{% endif %}class="sidebar_link">
+                    <i class="fas fa-users"></i>
+                    <a href="{% url 'faculty-info' %}">Faculty</a>
+                </div>
+                <div {% if is_active == 'leave' %}class="sidebar_link active"{% endif %}class="sidebar_link">
+                    <i class="fa fa-file"></i>
+                    <a href="{% url 'apply_leave_stu' %}">Leave</a>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal">
+            <header>
+                <nav>
+                    <li class="branch">Mechanical <span>Engineering</span></li>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'logout' %}" class="btn"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                    </ul>
+                </nav>
+            </header>
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div class="intro">
+    <h1>Welcome to Dashboard</h1>
+    <p>Hello <span>{{name}}</span>, welcome to your Dashboard</p>
+</div>
+<div class="cards">
+  <div class="card cgpa">
+    <fa-icon [icon]="['fas','user-graduate']"></fa-icon>
+    <div class="inside">
+      <h2>{{cgpa}}</h2>
+      <span>CGPA</span>
+    </div>
+  </div>
+  <div class="card passed">
+    <fa-icon [icon]="['fas', 'thumbs-up']"></fa-icon>
+    <div class="inside">
+      <h2>{{passed}}</h2>
+      <span>Total Subjects Passed</span>
+    </div>
+  </div>
+  <div class="card due">
+    <fa-icon [icon]="['fas', 'thumbs-down']"></fa-icon>
+    <div class="inside">
+      <h2>{{failed}}</h2>
+      <span>Due Subjects</span>
+    </div>
+  </div>
+  <div class="card semister">
+    <fa-icon [icon]="['fas','calendar']"></fa-icon>
+    <div class="inside">
+      <h2>{{semisters}}/8</h2>
+      <span>Semister</span>
+    </div>
+  </div>
+</div>
+<div class="chart">
+  <h1 class="chart-title">Overall Semisters Subject wise Performance</h1>
+  <div class="graph">
+    <canvas id="mychart"></canvas>
+  </div>
+</div>

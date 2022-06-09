@@ -1,0 +1,54 @@
+.academics{
+    background: url('https://mrcet.com/images/departments/mech%20banner.jpg') no-repeat center;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    background-blend-mode: darken;
+    margin-top: 90px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.academics h2{
+    font-size: 2rem;
+}
+.academics p{
+    max-width: 1050px;
+}
+.teaching{
+    width: 70%;
+    margin: 10px auto;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.teaching h1{
+    text-align: center;
+    background-color: rgb(211, 59, 59);
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.teaching p{
+    margin: 15px 0;
+    padding: 0 10px;
+    color: #424b46;
+}
+.show-images{
+    width: 100%;
+    padding: 20px;
+    background: rgb(247, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.show-images img{
+    width: 40%;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+}

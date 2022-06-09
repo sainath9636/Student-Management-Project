@@ -1,0 +1,57 @@
+{% extends "student/dashboard.html" %}
+{% load static %}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'css/student/apply-leave.css' %}">
+{% endblock link %}
+{% block content %}
+      <div class="leave_apply">
+        <form action="{% url 'apply_leave_stu' %}" method="post" class="form">
+          {% csrf_token %}
+          <h2>Apply Leave</h2>
+          <div class="name date">
+              <label for="reason">Enter Reason</label><br>
+              <input type="text" id="reason" name = 'reason' placeholder="Enter Name" required>
+          </div>
+          <div class="date">
+              <label for="start_date">From</label><br>
+              <input type="date" name="start_date" placeholder="From Date" required>
+          </div>
+          <div class="date">
+              <label for="mobile">To</label><br>
+              <input type="date" name="end_date" placeholder="To Date" required>
+          </div>
+          <div class="button">
+              <button type="submit">Apply</button>
+          </div>
+      </form>
+      </div>
+
+      <div class="leaves_list">
+        <table class="leaves-table">
+          <tr>
+            <th>S.NO:</th>
+            <th>Candidate ID</th>
+            <th>Candidate Name</th>
+            <th>Reason</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Status</th>
+          </tr>
+          {% for row in data %}
+            <tr>
+              <td>{{forloop.counter}}</td>
+              <td>{{row.candidate_id}}</td>
+              <td>{{request.session.name}}</td>
+              <td>{{row.leave_reason|truncatechars:25}}</td>
+              <td>{{row.leave_start_date}}</td>
+              <td>{{row.leave_end_date}}</td>
+              <td class={{row.status}} >{{row.status|safe}}</td>
+            </tr>
+
+          {% endfor %}
+
+        </table>
+      </div>
+{% endblock content %}
+
+

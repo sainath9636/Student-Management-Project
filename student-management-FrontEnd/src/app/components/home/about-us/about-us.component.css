@@ -1,0 +1,138 @@
+.about-container{
+    max-width: 900px;
+    margin: 90px auto 30px auto;
+}
+.about-container .title{
+    width: 100%;
+    background: rgb(243, 130, 50);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+.about-college .pics{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.about-college .description p{
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #676867;
+}
+.about-college .pics img{
+    width: 30%;
+    height: 250px;
+    object-fit: cover;
+    margin: 10px 10px;
+}
+.about-container .about-college{
+    width: 100%;
+    padding: 10px;
+}
+.about-college .description{
+    width: 100%;
+}
+.achievements{
+    width: 100%;
+    margin-top: 55px;
+    background: rgb(199, 196, 196);
+    padding: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.achievements .title{
+    width: 60%;
+    margin: 10px auto;
+    border-radius: 35px;
+    margin-bottom: 20px;
+    background: #fff;
+    color: rgb(9, 179, 179);
+}
+.achievements .show-pics{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.show-pics img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+ol h2{
+    font-size: 20px;
+    margin: 15px 0;
+}
+ol li{
+    list-style:circle;
+    line-height: 2.5;
+    margin-left: 25px;
+    color: rgb(99, 95, 95);
+}
+.head-of-institutes{
+    width: 100%;
+    margin: 50px 0;
+}
+.head-of-institutes .title{
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px auto;
+    background: rgb(211, 38, 32);
+    color: #fff;
+    width: 60%;
+    border-radius: 25px;
+}
+.head-of{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.head-of .hod{
+    width: 250px;
+    height: 350px;
+    /* border: 2px solid rgb(112, 109, 109); */
+    margin-left: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.head-of .hod:hover{
+    transform: translateY(10px);
+}
+.hod .image{
+    width: 100%;
+    height: 250px;
+    margin: 0;
+}
+.hod .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.hod .desc{
+    background: rgb(34, 197, 202);
+    height: 100px;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hod .desc p{
+    margin: 0;
+}

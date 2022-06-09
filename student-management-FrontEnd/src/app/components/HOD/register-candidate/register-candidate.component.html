@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form [formGroup]="registerForm" (ngSubmit)="registerCandidate()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">User Id</span>
+            <input type="text" formControlName="id" placeholder="Enter your name" #inputUser (input)="checkUser(inputUser.value)" required>
+            <p class="error" *ngIf="userId && userId.touched && userId.invalid">User Id Should not be Blank</p>
+            <p *ngIf="userError" class="error">User Id Already Exist</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" formControlName="name" required>
+            <p class="error" *ngIf="userName && userName.touched && userName.invalid">User name should Not be Blank</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" formControlName="email" #inputEmail (input)="checkEmail(inputEmail.value)" required>
+            <p *ngIf="emailError" class="error">Email Already Exist</p>
+            <p class="error" *ngIf="emailId && emailId.touched && emailId.invalid">Email Should not be Blank</p>
+
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" minlength="10" formControlName="mobile" placeholder="Enter your number" #inputMobile (input)="checkMobile(inputMobile.value)" required>
+            <p *ngIf="mobileError" class="error">Phone number Already Exist</p>
+            <p class="error" *ngIf="mobileNo && mobileNo.touched && (mobileNo.errors?.['minlength'] || mobileNo.invalid)">Mobile Number Should be length of 10</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" minlength="3" formControlName="password" placeholder="Enter your password" required #pass1>
+            <p class="error" *ngIf="passWord && passWord.touched && (passWord.errors?.['minlength'] || passWord.invalid)">Password minimum length should be 3</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" formControlName="password2" placeholder="Confirm your password" required #pass2 (input)="checkPass(pass1.value, pass2.value)">
+            <p *ngIf="passError" class="error">passwords should matched</p>
+          </div>
+          <div class="input-box">
+            <span class="details">Gender:</span>
+            <select name="semisters" id="semisters" required formControlName='gender' placeholder="select geneder">
+              <option value="" disabled selected hidden>Choose Gender...</option>
+              <option value="MALE">MALE</option>
+              <option value="FEMALE">FEMALE</option>
+            </select>
+        </div>
+        <div class="input-box">
+            <span class="details">Select Candidate Type:</span>
+            <select name="semisters" id="semisters" required formControlName='user_type' #candidate (input)="checkUserType(candidate.value)" placeholder="Select the Candidate Type">
+              <option value="" disabled selected hidden>Choose Candidate...</option>
+              <option value="STUDENT">STUDENT</option>
+              <option value="TEACHER">TEACHER</option>
+            </select>
+        </div>
+        <div class="input-box" *ngIf="is_student">
+            <span class="details">Parent Name</span>
+            <input type="text"formControlName="parent_name" placeholder="Parent Name">
+            <p class="error" *ngIf="parentName && parentName.touched && parentName.invalid">Parent name Should not be Blank</p>
+        </div>
+        <div class="input-box" *ngIf="is_student">
+            <span class="details">Parent Mobile Number</span>
+            <input type="text" minlength="10" formControlName="parent_number" placeholder="Parent Mobile Number">
+            <p class="error" *ngIf="parentNo && parentNo.touched && (parentNo.errors?.['minlength'] || parentNo.invalid)">Mobile Number Should be length of 10</p>
+
+        </div>
+    </div>
+        <div class="button">
+          <button type="submit" class="submit" value="Register">Register</button>
+        </div>
+      </form>
+      <p *ngIf="finalErrorr" class="error">Please Enter all the fields Correctly!!!</p>
+    </div>
+  </div>
+
+</body>
+</html>

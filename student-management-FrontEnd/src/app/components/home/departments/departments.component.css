@@ -1,0 +1,155 @@
+/* margin: 90px auto 30px auto; */
+.department{
+    max-width: 900px;
+    margin: 90px auto 30px auto;
+}
+.department .title{
+    width: 100%;
+    background: rgb(243, 130, 50);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+.dept{
+    width: 100%;
+    margin: 20px 0 40px 0;
+}
+.dept .sub-title{
+    text-decoration: underline;
+    text-decoration-color: rgb(15, 14, 15);
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding: 0 7px;
+}
+.dept .description{
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.dept .description p{
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: rgb(75, 72, 72);
+}
+.dept .provide{
+    text-align: center;
+    color: #42495b;
+    font-size: 20px;
+    margin: 15px auto;
+    font-weight: 600;
+}
+.dept .show-pics{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: rgb(236, 230, 230);
+}
+.show-pics .image{
+    width: 40%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-blend-mode: darken;
+    margin: 0 0 10px 10px;
+}
+/* .show-pics .image h4{
+    z-index: 5;
+} */
+.show-pics .data-science{
+    background: url("https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZGF0YSUyMHNjaWVuY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.5);
+}
+.show-pics .cyber{
+    background: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y3liZXIlMjBzZWN1cml0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+}
+.show-pics .artificial{
+    background: url("https://media.istockphoto.com/photos/and-ai-technology-global-communication-network-concept-business-graph-picture-id1281389422?b=1&k=20&m=1281389422&s=170667a&w=0&h=Ijl3j64QcB2FpE9gOzir1AjdOfL9AGj1UhVvETFt8vA=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+}
+.show-pics .web{
+    background: url("https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.ece .show-pics, .aero .show-pics{
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.ece .image, .aero .image{
+    width: 100%;
+    height: 400px;
+
+}
+.ece .image img, .aero .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mech .image.labs{
+    background: url("https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZW5naW5lZXJpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+}
+.mech .image.faculty{
+    background: url("https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+}
+.mech .image.equipment{
+    background: url("https://images.unsplash.com/photo-1581093803931-46e730e7622e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVjaGFuaWNhbCUyMGVuZ2luZWVyaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+}
+.mech .image.designing{
+    background: url("https://media.istockphoto.com/photos/architect-working-on-blueprint-architects-workplace-architectural-picture-id516144088?b=1&k=20&m=516144088&s=170667a&w=0&h=nEIe-NePKyVN5YUoUWTsbecziPKZH1mEEqvkV3HcMfs=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+}
+.show-pics .android{
+    background: url("https://images.unsplash.com/photo-1502201563651-826cbb30c3dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.5);
+}
+.show-pics .analytics{
+    background: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YW5hbHlzaXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.5);
+}

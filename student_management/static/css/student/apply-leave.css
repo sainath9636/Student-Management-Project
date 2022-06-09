@@ -1,0 +1,111 @@
+.leave_apply{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.leave_apply .form{
+    padding: 30px 10px;
+    background: rgb(15, 15, 15);
+    box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 24px;
+    border-radius: 10px;
+    color: #fff;
+    width: 500px;
+}
+.form .date{
+    position: relative;
+    margin-left: 0;
+    width: 70%;
+    margin-bottom: 20px;
+}
+.form h2{
+    text-align: center;
+}
+.date label{
+    position: absolute;
+    left: 20px;
+    top: 0;
+    font-size: 18px;
+}
+.date input{
+    width: 100%;
+    height: 30px;
+    margin-top: 8px;
+    outline: none;
+    border: 1px solid rgb(219, 42, 42);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.button{
+    width: 150px;
+    text-align: center;
+    background: rgb(252, 251, 251);
+    padding: 10px;
+    margin: auto;
+    border-radius: 22px;
+}
+.button button{
+    background: transparent;
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(219, 42, 42);
+}
+.title{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.leaves_list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #009688;
+    min-height: 400px;
+    padding: 20px 0;
+
+}
+.leaves-table {
+    border-collapse: collapse;
+    width: 90%;
+}
+.leaves-table td, .leaves-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.leaves-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.leaves-table tr:hover{
+    background-color: #ddd;
+}
+.leaves-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #a71250;
+    color: white;
+    text-align: center;
+}
+
+.PENDING {
+    color: orange;
+}
+
+.REJECTED {
+    color: red;
+}
+
+.ACCEPTED {
+    color: green;
+}

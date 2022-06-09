@@ -1,0 +1,89 @@
+{% extends "student/dashboard.html" %}
+{% load static %}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'css/student/marks.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+
+{% endblock link %}
+{% block content %}
+<div class="semister">
+    <form action="{% url 'student_mark' %}" method="post">
+        {% csrf_token %}
+        <label for="semisters">Select the Semister:</label>
+        <input list="semisters" name="semisters" id=" semisters" required>
+        <datalist id="semisters">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+        <option value="6">
+        <option value="7">
+        <option value="8">
+        </datalist>
+        <input type="submit">
+    </form>
+</div>
+<div class="performance">
+    <h1>Semister {% if sem > '0' %}
+        {{sem}}
+    {% endif %}  overall performance</h1>
+    <div class="graphs">
+        <div class="graph1">
+
+            <canvas id="sem"></canvas>
+        </div>
+        <div class="graph2">
+            <canvas id='mid1'></canvas>
+        </div>
+        <div class="graph3">
+            <canvas id="mid2"></canvas>
+        </div>
+        <div class="graph4">
+            <canvas id="slip"></canvas>
+        </div>
+    </div>
+</div>
+<script>
+    function graph(id, labels, data, exam_name){
+        var chart = new Chart(id, {
+      type: 'bar',
+      data: {
+          labels:labels,
+          datasets: [{
+              label: `Overall ${exam_name} Performance in %`,
+              data: data,
+              backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)',
+              "#6970d5",
+              ],
+              barThickness:80
+          }]
+      },
+      options: {
+        maintainAspectRatio:false,
+        responsiveness:true,
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+  }
+var sem = document.getElementById('sem').getContext('2d')
+var mid_1 = document.getElementById('mid1').getContext('2d')
+var mid_2 = document.getElementById('mid2').getContext('2d')
+var slips = document.getElementById('slip').getContext('2d')
+sem_marks = {{sem_marks|safe}}
+mid1_marks = {{mid1|safe}}
+mid2_marks = {{mid2|safe}}
+slip_marks = {{slip|safe}}
+graph(sem,sem_marks[0],sem_marks[1],"SEM EXAM")
+graph(mid_1,mid1_marks[0],mid1_marks[1],"MID-1 EXAM")
+graph(mid_2,mid2_marks[0],mid2_marks[1],"MID-2 EXAM")
+graph(slips,slip_marks[0],slip_marks[1],"SLIP-TEST EXAM")
+</script>
+{% endblock content %}

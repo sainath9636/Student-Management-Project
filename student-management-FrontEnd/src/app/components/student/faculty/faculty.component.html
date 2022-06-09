@@ -1,0 +1,21 @@
+<div class="search">
+    <form method="post" [formGroup]='searchForm' (ngSubmit)="searchFaculty()">
+      <input type="text" name="search" id="search" placeholder="Search here" required formControlName="search">
+      <input type="submit" value="search" id="submit">
+    </form>
+    <button class='view_all' (click)="allFaculty()"><a >View All</a></button>
+  </div>
+  <div class="faculty-list">
+
+      <div class="faculty" *ngFor="let row of data">
+          <div class="profile">
+             <img src="http://127.0.0.1:8000{{row.profile}}" alt="">
+          </div>
+          <div class="info">
+              <h2 class="name">{{row.teacher_name}}</h2>
+              <h2 class="id">{{row.teacher_id}}</h2>
+              <p class="mbl">{{row.phone_number}}</p>
+          </div>
+      </div>
+
+  </div>
