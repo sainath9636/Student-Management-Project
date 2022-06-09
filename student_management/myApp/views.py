@@ -11,23 +11,23 @@ from .serializers import *
 from rest_framework.authtoken.models import Token
 # from myApp.EmailBackend import EmailBackend
 # Create your views here.
-def Home(request):
-    request.session['is_active'] = 'home'
-    return render(request,'home/home.html')
-def Academics(request):
-    request.session['is_active'] = 'ac'
-    return render(request,'home/academics.html')
-def Departments(request):
-    request.session['is_active'] = 'dept'
-    return render(request, 'home/departments.html')
-def About(request):
-    request.session['is_active'] = 'about'
-    return render(request, 'home/about.html')
-def Facilities(request):
-    request.session['is_active'] = 'faci'
-    return render(request,'home/facilities.html')
-def loggin(request):
-    return render(request, 'home/login.html')
+# def Home(request):
+#     request.session['is_active'] = 'home'
+#     return render(request,'home/home.html')
+# def Academics(request):
+#     request.session['is_active'] = 'ac'
+#     return render(request,'home/academics.html')
+# def Departments(request):
+#     request.session['is_active'] = 'dept'
+#     return render(request, 'home/departments.html')
+# def About(request):
+#     request.session['is_active'] = 'about'
+#     return render(request, 'home/about.html')
+# def Facilities(request):
+#     request.session['is_active'] = 'faci'
+#     return render(request,'home/facilities.html')
+# def loggin(request):
+#     return render(request, 'home/login.html')
 @api_view(['POST'])
 def logged(request):
     if request.method == 'POST':
@@ -58,7 +58,6 @@ def logged(request):
             return HttpResponse("Please Enter valid details")
 @api_view(['GET'])
 def logout_user(request):
-
     logout(request)
     return Response({'msg':"SuccessfullyLogout"},200)
 
